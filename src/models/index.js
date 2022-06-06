@@ -16,7 +16,7 @@ process.env.NODE_ENV === "production"
             }
         } : {};
 
-let sequelize = new Sequelize(POSTGRES_URI);
+let sequelize = new Sequelize(POSTGRES_URI,sequelizeOptions);
 
 module.exports = {
     db: sequelize,

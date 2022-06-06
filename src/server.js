@@ -1,6 +1,6 @@
 'use strict';
 require('dotenv').config();
-const port = process.env.PORT || 3050;
+const port = process.env.PORT || 3000 ;
 const express = require("express");
 const app = express();
 const notFoundHandler = require('./error-handlers/404');
@@ -16,7 +16,7 @@ app.use(clothes);
 app.use("*", notFoundHandler);
 app.use(internalErrorHandler);
 
-function start(port) {
+function start() {
     app.listen(port, () => {
         console.log(`Server Listening on PORT ${port}`)
     })
